@@ -1,0 +1,11 @@
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  accessIndexFunction:
+    # This resource creates a Lambda function.
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Runtime: java8
+      # This is the Lambda function's handler.
+      Handler: AccessIndex.handleRequest
+      # The location of the Lambda function code.
+      CodeUri: ./src/main/java
